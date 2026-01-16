@@ -77,13 +77,14 @@ def main():
                     (20, 70), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0,255,255), 2)
 
         cv2.imshow("edges_with_bottom_blue_line", edges_vis)
-        if cv2.waitKey(10) & 0xFF == ord('q'):
+        if cv2.waitKey(30) & 0xFF == ord('q'):
             break
 
     reader.release()
     cv2.destroyAllWindows()
 
-    plotter.plot(t_hist, err_hist, m_hist)
+    # plotter.plot(t_hist, err_hist, m_hist)
 
 if __name__ == "__main__":
     main()
+
